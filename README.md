@@ -137,7 +137,22 @@ def optimize(self, learning_rate):
     return self.weights, self.biases
 ```
 
-The Adam optimizer adapts the learning rates for each parameter based on the moving averages of past gradients and squared gradients. The bias correction ensures that the moving averages are unbiased. The algorithm maintains moving averages of both the gradients `m_w, m_b` and the squared gradients `v_w, v_b`. These averages help smooth out the updates and improve convergence. At the beginning of training, the moving averages are biased toward zero, so bias correction is applied `m_w_hat, m_b_hat, v_w_hat, v_b_hat`. The weights and biases are updated using the moving averages, scaled by a corrected learning rate `np.sqrt(v_w_hat) + self.epsilon`, where epsilon prevents division by zero.
+The Adam optimizer adapts the learning rates for each parameter based on the moving averages of past gradients and squared gradients. The bias correction ensures that the moving averages are unbiased. The hyperparameters are initialized when the network parameters are initialized.
+
+```python
+# Adam hyperparameters
+self.beta1 = beta1
+self.beta2 = beta2
+self.epsilon = epsilon
+
+self.m_w = [np.zeros_like(w) for w in self.weights]
+self.m_b = [np.zeros_like(b) for b in self.biases]
+self.v_w = [np.zeros_like(w) for w in self.weights]
+self.v_b = [np.zeros_like(b) for b in self.biases]
+self.t = 0  # time step for Adam
+```
+
+The algorithm maintains moving averages of both the gradients `m_w, m_b` and the squared gradients `v_w, v_b`. These averages help smooth out the updates and improve convergence. At the beginning of training, the moving averages are biased toward zero, so bias correction is applied `m_w_hat, m_b_hat, v_w_hat, v_b_hat`. The weights and biases are updated using the moving averages, scaled by a corrected learning rate `np.sqrt(v_w_hat) + self.epsilon`, where epsilon prevents division by zero.
 
 ```python
 def optimize(self, learning_rate):
