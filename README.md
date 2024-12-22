@@ -223,6 +223,8 @@ Testing Accuracy: 0.9795
 
 ![alt text](assets/SGD_LR=0.1.png)
 
+---
+
 ### Stochastic Gradient Descent with Exponential Decay
 
 ```python
@@ -253,6 +255,8 @@ Testing Accuracy: 0.9795
 ![alt text](assets/SGD_LR=0.1_ExponentialDecay.png)
 ![alt text](assets/SGD_LR=0.1_ExponentialDecay_LRgraph.png)
 
+---
+
 ### Adam Optimizer
 
 - Initial learning rate = 0.001
@@ -274,6 +278,8 @@ Testing Accuracy: 0.9817
 ```
 
 ![alt text](assets/ADAM_LR=0.001.png)
+
+---
 
 ### Adam Optimizer with Exponential Decay
 
@@ -298,6 +304,8 @@ Testing Accuracy: 0.9821
 
 ![alt text](assets/ADAM_LR=0.001_ExponentialDecay.png)
 ![alt text](assets/ADAM_LR=0.001_ExponentialDecay_LRgraph.png)
+
+---
 
 ### Adam Optimizer with Exponential Decay and Early Stopping
 
