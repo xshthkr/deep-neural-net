@@ -37,22 +37,22 @@ def __init__(self, input_nodes=784, hidden_layers=[800, 800], output_nodes=10, a
     self.weights = []
     self.biases = []
 
-    # initialize with random weights and 0 biases
-    for i in range(len(hidden_layers)):
-        if i == 0:    # input layer to first hidden layer
-            w = 0.01 * np.random.randn(self.input_nodes, self.hidden_layers[i])
-            b = np.zeros((1, self.hidden_layers[i]))
-        else:
-            w = 0.01 * np.random.randn(self.hidden_layers[i-1], self.hidden_layers[i])
-            b = np.zeros((1, self.hidden_layers[i]))
-      
+    # input layer to first hidden layer
+    w = 0.01 * np.random.randn(self.input_nodes, self.hidden_layers[0])
+    b = np.zeros((1, self.hidden_layers[0]))
+    self.weights.append(w)
+    self.biases.append(b)
+
+    # between all hidden layers
+    for i in range(1, len(hidden_layers)):
+        w = 0.01 * np.random.randn(self.hidden_layers[i-1], self.hidden_layers[i])
+        b = np.zeros((1, self.hidden_layers[i]))
         self.weights.append(w)
         self.biases.append(b)
-    
+
     # last hidden layer to output layer
     w = 0.01 * np.random.randn(self.hidden_layers[-1], self.output_nodes)
     b = np.zeros((1, self.output_nodes))
-
     self.weights.append(w)
     self.biases.append(b)
 
@@ -354,6 +354,16 @@ The labels on the X axis are Epoch numbers offset by 1. The best test loss obser
 
 ![alt text](assets/ADAM_LR=0.001_ExponentialDecay_EarlyStopping.png)
 ![alt text](assets/ADAM_LR=0.001_ExponentialDecay_EarlyStopping_LRgraph.png)
+
+## Conclusion
+
+I have built and experimented with deep neural networks from scratch using Python and Numpy, testing various optimization techniques and training strategies. The results showed that the Adam optimizer, with its adaptive learning rate, outperformed basic Stochastic Gradient Descent (SGD) from the first epoch. It led to faster convergence and better accuracy overall.
+
+Although the SGD optimizer improved with learning rate decay, the gains were relatively small compared to Adam’s performance. This suggests that Adam’s ability to adjust the learning rate for each parameter dynamically makes manual decay less critical.
+
+I also found early stopping to be crucial in preventing overfitting and reducing unnecessary computation. By halting training once performance plateaued, I was able to reach near-optimal accuracy in fewer epochs, saving both time and resources.
+
+These findings highlight the efficiency of the Adam optimizer, especially in terms of rapid convergence and minimizing the need for extensive hyperparameter tuning.
 
 ## Resources
 
