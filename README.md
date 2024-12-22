@@ -347,12 +347,6 @@ if epochs_without_improvement >= patience:
 - Patience = 5 epochs
 
 ```txt
-
-
-import numpy as np
-import matplotlib.pyplot as plt
-import time
-
 Epoch 1/10 - 57.06s - Train Loss: 0.2188, Test Loss: 0.0938, Train Accuracy: 93.38%, Test Accuracy: 97.23%
 Epoch 2/10 - 113.69s - Train Loss: 0.0886, Test Loss: 0.0735, Train Accuracy: 97.25%, Test Accuracy: 97.68%
 Epoch 3/10 - 167.89s - Train Loss: 0.0564, Test Loss: 0.0785, Train Accuracy: 98.25%, Test Accuracy: 97.59%
