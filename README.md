@@ -329,7 +329,7 @@ if epochs_without_improvement >= patience:
 
 - Learning rate = 0.001
 - Decay rate = 0.01
-- Patience = 5 epochs\
+- Patience = 5 epochs
 
 ```txt
 
