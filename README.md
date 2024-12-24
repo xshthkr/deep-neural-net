@@ -2,6 +2,8 @@
 
 A deep neural network implemented from scratch in Python. The only library used in the making of this neural net is **NumPy**.
 
+I trained this model over the MNIST dataset with:
+
 - Testing Accuracy: 98.5%
 - Training Accuracy: 99.4%
 
