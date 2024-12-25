@@ -1,11 +1,16 @@
 # Deep Neural Network
 
-A deep neural network implemented from scratch in Python. The only library used in the making of this neural net is **NumPy**.
+A fully connected neural network (MLP) implemented from scratch in Python. The only library used in the making of this neural net is **NumPy**.
 
 I trained this model over the MNIST dataset with:
 
 - Testing Accuracy: 98.5%
 - Training Accuracy: 99.4%
+
+and over the Fashion MNIST dataset with:
+
+- Testing Accuracy: 89.4%
+- Training Accuracy: 95.3%
 
 ## Architecture
 
