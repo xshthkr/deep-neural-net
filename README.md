@@ -9,18 +9,30 @@ I trained this model over the MNIST dataset with:
 
 and over the Fashion MNIST dataset with:
 
-- Testing Accuracy: 89.4%
-- Training Accuracy: 95.3%
+- Testing Accuracy: 90.0%
+- Training Accuracy: 97.4%
 
 ## Architecture
 
-- Input layer with 784 neurons
-- 2 Hidden layers with 800 neurons each
-- Output layer with 10 neurons
+For the MNIST Dataset:
+
+- Input layer:      784 neurons,    ReLU
+- Hidden layer 1:   800 neurons,    RelU
+- Hidden layer 2:   800 neurons,    ReLU
+- Output layer:     10 neurons,     Softmax
+
+For the Fashion MNIST Dataset:
+
+- Input layer:      784 neurons,    RelU
+- Hidden layer 1:   1024 neurons,   ReLU
+- Hidden layer 2:   512 neurons,    ReLU
+- Hidden layer 3:   256 neurons,    ReLU
+- Output layer:     10 neurons,     Softmax
 
 The neural network uses ReLU activation for hidden layers and Softmax for the output layer to produce a probability distribution for classification.
 
-The code is not dependent on a predefined architecture.
+> [!NOTE]
+> The code is not dependent on a predefined architecture.
 
 ## Initialization
 
@@ -386,4 +398,5 @@ These findings highlight the efficiency of the Adam optimizer, especially in ter
 - [Deep Learning - 3Blue1Brown](https://youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi&si=NfpFWfdnJt3LeYVM)
 - [Neural Networks and Deep Learning - Michael Nielsen](http://neuralnetworksanddeeplearning.com/)
 - Building a Neural Network from Scratch (Parts [1](https://jonathanweisberg.org/post/A%20Neural%20Network%20from%20Scratch%20-%20Part%201/) and [2](https://jonathanweisberg.org/post/A%20Neural%20Network%20from%20Scratch%20-%20Part%202/)) - Jonathan Weisberg
-- [MNIST Dataset](https://yann.lecun.com/exdb/mnist/)
+- [MNIST Dataset](http://yann.lecun.com/exdb/mnist/)
+- [Fashion MNIST Dataset](https://github.com/zalandoresearch/fashion-mnist)
