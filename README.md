@@ -221,7 +221,7 @@ def train(self, x_train, y_train, x_test, y_test, epochs, batch_size):
     return self.weights, self.biases
 ```
 
-## Comparative Study
+## Comparative Study over the MNIST Dataset
 
 ### Stochastic Gradient Descent
 
