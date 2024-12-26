@@ -383,6 +383,10 @@ The labels on the X axis are Epoch numbers offset by 1. The best test loss obser
 ![alt text](assets/ADAM_LR=0.001_ExponentialDecay_EarlyStopping.png)
 ![alt text](assets/ADAM_LR=0.001_ExponentialDecay_EarlyStopping_LRgraph.png)
 
+## Improvements
+
+Testin the neural network over the CIFAR10 dataset shows the need for further improvement. Implementing momentum with the SGD optimizer to improve convergence speed and implementing regularization to control overfitting would be the next steps to improving this neural network.
+
 ## Conclusion
 
 I have built and experimented with deep neural networks from scratch using Python and Numpy, testing various optimization techniques and training strategies. The results showed that the Adam optimizer, with its adaptive learning rate, outperformed basic Stochastic Gradient Descent (SGD) from the first epoch. It led to faster convergence and better accuracy overall.
@@ -400,3 +404,4 @@ These findings highlight the efficiency of the Adam optimizer, especially in ter
 - Building a Neural Network from Scratch (Parts [1](https://jonathanweisberg.org/post/A%20Neural%20Network%20from%20Scratch%20-%20Part%201/) and [2](https://jonathanweisberg.org/post/A%20Neural%20Network%20from%20Scratch%20-%20Part%202/)) - Jonathan Weisberg
 - [MNIST Dataset](http://yann.lecun.com/exdb/mnist/)
 - [Fashion MNIST Dataset](https://github.com/zalandoresearch/fashion-mnist)
+- [CIFAR10 Dataset](https://www.cs.toronto.edu/%7Ekriz/cifar.html)
